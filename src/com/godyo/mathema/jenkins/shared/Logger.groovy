@@ -20,6 +20,6 @@ class Logger implements Serializable {
 		map.put("MESSAGE", message)
 		script = new StrSubstitutor(map).replace(script);
 		
-		sh "${script}"
+		steps.sh "${script}"
 	}
 }
