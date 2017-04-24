@@ -2,15 +2,15 @@ package com.godyo.mathema.jenkins.shared
 import org.apache.commons.lang3.text.StrSubstitutor;
 
 @Grab('org.apache.commons:commons-lang3:3.5')
-class MyEcho implements Serializable {
+class Logger implements Serializable {
 
 	def steps;
 	
-	MyEcho(steps) {
+	Logger(steps) {
 		this.steps = steps;
 	}
 	
-	public void echo(String message) {
+	public void log(String message) {
 		
 		// Skript von Datei laden
 		def script = libraryResource 'com/godyo/mathema/jenkins/shared/resources/deployUpdateSite.sh'
@@ -22,5 +22,4 @@ class MyEcho implements Serializable {
 		
 		sh "${script}"
 	}
-
 }
