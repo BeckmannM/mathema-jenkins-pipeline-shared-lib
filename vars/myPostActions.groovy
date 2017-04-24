@@ -6,5 +6,5 @@ def call() {
 	logger.log("Nun werden die post build-Aktionen ausgefuehrt");
 	
 	// Emails versenden
-	step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: 'manuel.beckmann@godyo.com', sendToIndividuals: false])
+//	step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: 'manuel.beckmann@godyo.com', sendToIndividuals: false])
 }

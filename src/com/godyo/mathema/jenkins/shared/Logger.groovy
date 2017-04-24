@@ -13,7 +13,7 @@ class Logger implements Serializable {
 	public void log(String message) {
 		
 		// Skript von Datei laden
-		def script = libraryResource 'com/godyo/mathema/jenkins/shared/resources/deployUpdateSite.sh'
+		def script = libraryResource 'com/godyo/mathema/jenkins/shared/resources/echo.sh'
 
 		// Message im Skript ersetzen
 		def map = new HashMap();
