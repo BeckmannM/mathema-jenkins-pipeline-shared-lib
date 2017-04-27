@@ -1,5 +1,3 @@
-import com.godyo.mathema.jenkins.shared.Logger
-
 def call(String zipFile, String targetDir) {
 	
 	echo zipFile;
@@ -26,6 +24,7 @@ def call(String zipFile, String targetDir) {
 		}
 		
 	} catch (Exception e) {
-		currentBuild.currentResult = SUCCESS
+		echo "exception caught: " + e;
+		currentBuild.currentResult = "SUCCESS"
 	}
 }
