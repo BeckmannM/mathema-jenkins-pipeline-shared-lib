@@ -1,4 +1,4 @@
-def call(String zipFile, String targetDir) {
+def call(String zipFile) {
 	
 	echo zipFile;
 	
