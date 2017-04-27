@@ -21,7 +21,6 @@ def call(String zipFile) {
 		}
 		
 		if (targetDir != null) {
-			echo "targetDir: ${targetDir}"
 			unzip dir: targetDir, glob: '', zipFile: zipFile
 		}
 		
