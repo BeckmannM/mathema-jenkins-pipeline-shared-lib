@@ -25,6 +25,6 @@ def call(String zipFile, String targetDir) {
 		
 	} catch (Exception e) {
 		echo "exception caught: " + e;
-		currentBuild.currentResult = "SUCCESS"
+		currentBuild.result = "SUCCESS"
 	}
 }
