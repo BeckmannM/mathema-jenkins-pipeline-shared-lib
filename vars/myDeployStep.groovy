@@ -1,7 +1,6 @@
 def call(String zipFile, String targetDir) {
 	
 	echo zipFile;
-	echo targetDir
 	
 	try {
 		timeout(1) {
@@ -20,7 +19,7 @@ def call(String zipFile, String targetDir) {
 		}
 		
 		if (env.deploymnetTarget != null) {
-			unzip dir: targetDir , zipFile: zipFile
+			unzip dir: env.deploymnetTarget , zipFile: zipFile
 		}
 		
 	} catch (Exception e) {
