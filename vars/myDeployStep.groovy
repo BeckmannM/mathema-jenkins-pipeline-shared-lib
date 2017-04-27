@@ -1,7 +1,10 @@
 import com.godyo.mathema.jenkins.shared.Logger
 
 def call(String zipFile, String targetDir) {
-
+	
+	echo zipFile;
+	echo targetDir
+	
 	try {
 		timeout(1) {
 			// some block
