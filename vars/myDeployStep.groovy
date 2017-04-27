@@ -2,10 +2,12 @@ def call(String zipFile) {
 	
 	echo zipFile;
 	
+	def targetDir = null;
+	
 	try {
 		timeout(1) {
 			// some block
-			env.deploymnetTarget = input(
+			targetDir = input(
 					message: 'Alles gut? Ausliefern?',
 					ok: 'OK',
 					parameters: [
@@ -18,8 +20,9 @@ def call(String zipFile) {
 					)
 		}
 		
-		if (env.deploymnetTarget != null) {
-			unzip dir: env.deploymnetTarget , zipFile: zipFile
+		if (targetDir != null) {
+			echo "targetDir: ${targetDir}"
+			unzip dir: targetDir, glob: '', zipFile: zipFile
 		}
 		
 	} catch (Exception e) {
