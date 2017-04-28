@@ -1,4 +1,4 @@
-def call(String zipFile) {
+def call(String src) {
 	
 	echo zipFile;
 	
@@ -21,7 +21,7 @@ def call(String zipFile) {
 		}
 		
 		if (targetDir != null) {
-			unzip dir: targetDir, glob: '', zipFile: zipFile
+			sh "cp -r ${src} ${targetDir}"
 		}
 		
 	} catch (Exception e) {
