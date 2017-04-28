@@ -10,7 +10,7 @@ def call(String src) {
 					ok: 'OK',
 					parameters: [
 						string(
-						defaultValue: 'C:\\Users\\Manuel\\Desktop\\MathemaCampus2017\\Deployment',
+						defaultValue: 'C:/Users/Manuel/Desktop/MathemaCampus2017/Deployment',
 						description: 'Wohin soll ausgeliefert werden?',
 						name: 'Verzeichnisname'
 						)
