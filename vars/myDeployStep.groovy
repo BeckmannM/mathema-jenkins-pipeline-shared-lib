@@ -1,7 +1,5 @@
 def call(String src) {
-	
-	echo zipFile;
-	
+		
 	def targetDir = null;
 	
 	try {
